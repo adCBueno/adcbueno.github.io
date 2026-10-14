@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>adri.js_</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="logo">adri<em>.js</em>_</div>
+  <div class="nav-mid">
+    <a href="#about">Yo</a>
+    <a href="#blog">Blog</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#cv">CV</a>
+    <a href="#games">Juegos</a>
+  </div>
+  <div class="nav-right">
+    <div class="tdots">
+      <button class="td on" id="td-dark"  style="background:#4ade80"                           onclick="T('','td-dark')"        title="Verde (default)"></button>
+      <button class="td"    id="td-rosso" style="background:#f87171"                           onclick="T('rosso','td-rosso')"  title="Rojo suave"></button>
+      <button class="td"    id="td-paper" style="background:#f5f1e8;border:1.5px solid #bbb"   onclick="T('paper','td-paper')"  title="Papel claro"></button>
+      <button class="td"    id="td-night" style="background:#6ea8fe"                           onclick="T('night','td-night')"  title="Noche azul"></button>
+    </div>
+    <a href="#contact" class="nav-cta">Contacto →</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-top">
+    <div class="hero-meta">
+      <span>Software Engineer · Divulgadora STEM · adri.js_</span>
+      <span>Madrid, 2026</span>
+    </div>
+    <div class="hero-center">
+      <div class="hero-handle">adri.js_</div>
+      <div class="hero-desc">
+        <div class="hero-tagline">Construyendo con código,<br/><em>divulgando con pasión.</em></div>
+        <div class="hero-right">
+          <div class="hero-bio">
+            Soy <strong>Software Engineer</strong> de día y divulgadora de <strong>ciencia y tecnología</strong> de noche. Mi misión es hacer que la tech sea para todo el mundo — sin pretensiones, sin barreras.
+          </div>
+          <div class="hero-ctas">
+            <a href="#blog" class="hcta accent">Leer el blog →</a>
+            <a href="#games" class="hcta">Jugar</a>
+            <a href="#cv" class="hcta">Ver CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <div id="typed-line"><span id="tt"></span><span class="cur"></span></div>
+      <div class="scroll-hint">↓ Scroll</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<div class="sec" id="about">
+  <div class="sec-head rv">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">Sobre <em>mí</em></h2>
+  </div>
+  <div class="about-grid rv">
+    <div class="about-body">
+      <p>Hola, soy <strong>Adriana C. Bueno</strong> — más conocida en internet como <strong>adri.js_</strong>. Soy Software Engineer con todo lo que eso implica: café, bugs, métricas, sprints y el eterno debate de tabs vs. espacios.</p>
+      <p>Pero fuera del trabajo, me obsesiona que la tecnología sea accesible. Que una chica de pueblo pueda entender qué es el machine learning. Que tu primo sin formación técnica sepa por qué los sistemas fallan. Que la ciencia <span class="y">deje de dar miedo</span>.</p>
+      <p>Por eso divulgo. Por eso comparto. Por eso existe este espacio.</p>
+      <div class="tag-row">
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Software Engineering</span>
+        <span class="tag">STEM</span>
+        <span class="tag">Métricas</span>
+        <span class="tag">System Design</span>
+        <span class="tag">Divulgación</span>
+        <span class="tag">DevEx</span>
+      </div>
+    </div>
+    <div>
+      <div class="fact-list">
+        <div class="fact">
+          <span class="fact-n">01</span>
+          <div><div class="fact-t">Combustible</div><div class="fact-d">Café con leche a las 8am. Sin eso, el compilador llora.</div></div>
+        </div>
+        <div class="fact">
+          <span class="fact-n">02</span>
+          <div><div class="fact-t">Bug favorito</div><div class="fact-d">El que tardas 3h en encontrar y es un punto y coma que sobra.</div></div>
+        </div>
+        <div class="fact">
+          <span class="fact-n">03</span>
+          <div><div class="fact-t">Misión personal</div><div class="fact-d">Que más mujeres entren en tech sin sentirse impostoras.</div></div>
+        </div>
+        <div class="fact">
+          <span class="fact-n">04</span>
+          <div><div class="fact-t">Frase de cabecera</div><div class="fact-d">"Primero hazlo funcionar, luego hazlo bonito."</div></div>
+        </div>
+        <div class="fact">
+          <span class="fact-n">05</span>
+          <div><div class="fact-t">Actualmente obsesionada con</div><div class="fact-d">DORA metrics y cómo hacer que los equipos de ingeniería vuelen.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stat-strip rv">
+    <div class="st"><div class="st-n">3+</div><div class="st-l">años en tech</div></div>
+    <div class="st"><div class="st-n">∞</div><div class="st-l">bugs resueltos</div></div>
+    <div class="st"><div class="st-n">1</div><div class="st-l">comunidad STEM</div></div>
+  </div>
+</div>
+
+<div class="full-line"></div>
+
+<!-- ══ BLOG ══ -->
+<div class="sec" id="blog">
+  <div class="sec-head rv">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">Blog & <em>notas</em></h2>
+  </div>
+  <div class="blog-controls rv">
+    <button class="bf on" data-f="all"          onclick="fB(this,'all')">Todos</button>
+    <button class="bf"    data-f="engineering"   onclick="fB(this,'engineering')">Engineering</button>
+    <button class="bf"    data-f="stem"          onclick="fB(this,'stem')">STEM</button>
+    <button class="bf"    data-f="proyectos"     onclick="fB(this,'proyectos')">Proyectos</button>
+    <button class="bf"    data-f="comunidad"     onclick="fB(this,'comunidad')">Comunidad</button>
+    <input class="bs" type="text" placeholder="Buscar..." oninput="sB(this.value)"/>
+  </div>
+  <!-- Los posts se renderizan desde data/posts.js -->
+  <div class="post-list" id="pl"></div>
+</div>
+
+<div class="full-line"></div>
+
+<!-- ══ PROJECTS ══ -->
+<div class="sec" id="projects">
+  <div class="sec-head rv">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title"><em>Proyectos</em></h2>
+  </div>
+  <div class="proj-list">
+    <div class="proj rv">
+      <div class="proj-n">01</div>
+      <div>
+        <h3>STEM Dashboard</h3>
+        <p>Panel interactivo para visualizar conceptos de ciencia de forma accesible. Desde física cuántica hasta machine learning, para cualquiera.</p>
+        <div class="proj-tags"><span class="ptag">React</span><span class="ptag">D3.js</span><span class="ptag">Node.js</span></div>
+      </div>
+      <div class="proj-links"><a href="#" class="plink">GitHub ↗</a><a href="#" class="plink">Live demo ↗</a></div>
+    </div>
+    <div class="proj rv">
+      <div class="proj-n">02</div>
+      <div>
+        <h3>Metrics Tracker</h3>
+        <p>CLI que trackea DORA metrics de un repositorio git automáticamente. Exporta reportes legibles para no-técnicos.</p>
+        <div class="proj-tags"><span class="ptag">Python</span><span class="ptag">GitHub API</span><span class="ptag">CLI</span></div>
+      </div>
+      <div class="proj-links"><a href="#" class="plink">GitHub ↗</a></div>
+    </div>
+    <div class="proj rv">
+      <div class="proj-n">03</div>
+      <div>
+        <h3>adri.js_ — esta web</h3>
+        <p>Mi espacio de divulgación tech: convirtiendo conceptos complejos en contenido que cualquiera puede entender y disfrutar.</p>
+        <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+      </div>
+      <div class="proj-links"><a href="#" class="plink">Estás aquí →</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="full-line"></div>
+
+<!-- ══ CV ══ -->
+<div class="sec" id="cv">
+  <div class="sec-head rv">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">Trayectoria</h2>
+  </div>
+  <div class="cv-cols rv">
+    <div>
+      <div class="cv-col-h">Experiencia</div>
+      <div class="xp">
+        <div class="xp-top"><span class="xp-role">Software Engineer</span><span class="xp-date">2023 — hoy</span></div>
+        <div class="xp-co">Empresa Tech</div>
+        <div class="xp-desc">Desarrollo backend, APIs REST y tooling interno. Lead de iniciativas de Developer Experience y métricas de calidad.</div>
+      </div>
+      <div class="xp">
+        <div class="xp-top"><span class="xp-role">Junior Software Developer</span><span class="xp-date">2022 — 2023</span></div>
+        <div class="xp-co">Startup</div>
+        <div class="xp-desc">Full stack con React y Node.js. CI/CD, mejora de cobertura de tests del 40% al 80%.</div>
+      </div>
+      <div class="xp">
+        <div class="xp-top"><span class="xp-role">Divulgadora STEM</span><span class="xp-date">2021 — hoy</span></div>
+        <div class="xp-co">adri.js_ (cuenta propia)</div>
+        <div class="xp-desc">Creación de contenido tech en redes. Comunidad en crecimiento de personas apasionadas por la tecnología.</div>
+      </div>
+      <div class="cv-col-h" style="margin-top:2rem">Educación</div>
+      <div class="xp">
+        <div class="xp-top"><span class="xp-role">Grado en Ingeniería Informática</span><span class="xp-date">2018 — 2022</span></div>
+        <div class="xp-co">Universidad</div>
+        <div class="xp-desc">Especialidad en Ingeniería del Software. TFG sobre métricas de calidad en sistemas distribuidos.</div>
+      </div>
+    </div>
+    <div>
+      <div class="cv-col-h">Skills técnicas</div>
+      <div class="sk-grid" style="margin-bottom:2rem">
+        <span class="sk y">JavaScript</span><span class="sk y">TypeScript</span>
+        <span class="sk c">React</span><span class="sk c">Node.js</span>
+        <span class="sk c">Python</span><span class="sk">SQL</span>
+        <span class="sk">Git</span><span class="sk">Docker</span><span class="sk">CI/CD</span>
+        <span class="sk">REST APIs</span><span class="sk">GitHub Actions</span>
+      </div>
+      <div class="cv-col-h">Skills blandas</div>
+      <div class="sk-grid">
+        <span class="sk r">Technical Writing</span>
+        <span class="sk r">Divulgación</span>
+        <span class="sk r">Comunidad</span>
+        <span class="sk r">Mentoring</span>
+      </div>
+      <a href="#" class="cv-dl" style="margin-top:2.5rem">↓ Descargar CV completo</a>
+    </div>
+  </div>
+</div>
+
+<div class="full-line"></div>
+
+<!-- ══ GAMES ══ -->
+<div class="sec" id="games">
+  <div class="sec-head rv">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title">Juegos <em>&amp; diversión</em></h2>
+  </div>
+  <div class="game-tabs rv">
+    <button class="gt on" onclick="gSwitch(this,'circle')">⭕ Círculo perfecto</button>
+    <button class="gt"    onclick="gSwitch(this,'g2048')">🧩 2048</button>
+    <button class="gt"    onclick="gSwitch(this,'stroop')">🎨 Stroop</button>
+  </div>
+
+  <!-- Circle -->
+  <div class="gp on" id="panel-circle">
+    <div class="game-frame">
+      <div class="game-header">
+        <h3>Dibuja el círculo perfecto</h3>
+        <p>Mantén pulsado y dibuja. ¿Llegás al 100%?</p>
+      </div>
+      <div class="game-body">
+        <canvas id="cc" width="480" height="280"></canvas>
+        <div id="cr-result"></div>
+        <div id="cr-msg">Dibuja para empezar</div>
+        <div class="cr-stats">
+          <div class="cs"><div class="v" id="cr-best">—</div><div class="l">Mejor</div></div>
+          <div class="cs"><div class="v" id="cr-last">—</div><div class="l">Último</div></div>
+          <div class="cs"><div class="v" id="cr-tries">0</div><div class="l">Intentos</div></div>
+        </div>
+        <button class="xbtn" style="margin-top:.8rem" onclick="clearCircle()">↺ Limpiar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2048 -->
+  <div class="gp" id="panel-g2048">
+    <div class="game-frame">
+      <div class="game-header">
+        <h3>2048</h3>
+        <p>Combina fichas para llegar a 2048. Flechas o swipe.</p>
+      </div>
+      <div class="game-body">
+        <div class="g20-head">
+          <div style="display:flex;gap:.5rem">
+            <div class="sc-box"><div class="sv" id="s20">0</div><div class="sl">Puntos</div></div>
+            <div class="sc-box"><div class="sv" id="b20s">0</div><div class="sl">Mejor</div></div>
+          </div>
+          <button class="xbtn" onclick="init20()">↺ Nueva partida</button>
+        </div>
+        <div id="b20"></div>
+        <div id="g20msg"></div>
+        <div class="g20hint">← → ↑ ↓  /  swipe en móvil</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stroop -->
+  <div class="gp" id="panel-stroop">
+    <div class="game-frame">
+      <div class="game-header">
+        <h3>El Efecto Stroop</h3>
+        <p>Haz clic en el color de la <em>tinta</em>, no de la palabra. 30 segundos.</p>
+      </div>
+      <div class="game-body">
+        <div id="s-start" class="s-start">
+          <p>Verás una palabra de color escrita en otro color.<br/><strong>Tu misión:</strong> identificar el color de la tinta, no lo que dice la palabra.</p>
+          <p>Es más difícil de lo que parece. Tu cerebro quiere leer, no ver.</p>
+          <button class="xbtn filled" onclick="startStroop()">▶ Empezar</button>
+        </div>
+        <div id="s-game" style="display:none">
+          <div id="stroop-wrap">
+            <div class="stimer-track"><div class="stimer-bar" id="sbar"></div></div>
+            <div id="sword"></div>
+            <div id="sprompt">¿De qué color es la tinta?</div>
+            <div class="sopts" id="sopts"></div>
+            <div id="sscore"></div>
+          </div>
+        </div>
+        <div id="s-final" class="s-final" style="display:none">
+          <span class="sfnum" id="sfnum"></span>
+          <p id="sfmsg"></p>
+          <button class="xbtn filled" onclick="startStroop()">↺ Jugar de nuevo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full-line"></div>
+
+<!-- ══ CONTACT ══ -->
+<div id="contact">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <h2>¿Hablamos?</h2>
+      <p>Proyectos, colaboraciones, preguntas, o simplemente decir hola. Todas las puertas están abiertas.</p>
+    </div>
+    <div class="soc-list">
+      <a href="https://instagram.com/adri.js_" target="_blank" class="soc">
+        <span>Instagram — @adri.js_</span><span class="soc-arr">↗</span>
+      </a>
+      <a href="https://tiktok.com/@adri.js_" target="_blank" class="soc">
+        <span>TikTok — @adri.js_</span><span class="soc-arr">↗</span>
+      </a>
+      <a href="https://github.com/" target="_blank" class="soc">
+        <span>GitHub</span><span class="soc-arr">↗</span>
+      </a>
+      <a href="mailto:adrianacc.bueno@gmail.com" class="soc">
+        <span>adrianacc.bueno@gmail.com</span><span class="soc-arr">↗</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>adri.js_</span>
+  <span>Adriana C. Bueno · 2026</span>
+  <span>Hecho a mano <span style="color:var(--red)">♥</span></span>
+</footer>
+
+<!-- Scripts: primero los datos, luego la lógica -->
+<script src="data/posts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Software Metrics: el GPS de tu equipo — adri.js_</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../css/style.css"/>
+<style>
+  /* ── Estilos específicos de la página de post ── */
+  .post-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+  }
+  .post-back {
+    font-family: var(--mono);
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--dim);
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    margin-bottom: 3rem;
+    transition: color .15s;
+  }
+  .post-back:hover { color: var(--acc); }
+  .post-header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+  .post-header .post-cat {
+    font-family: var(--mono);
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--acc);
+    margin-bottom: .8rem;
+  }
+  .post-header h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .post-header .meta {
+    font-family: var(--mono);
+    font-size: .68rem;
+    color: var(--lo);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .post-body p {
+    font-size: .95rem;
+    line-height: 1.9;
+    color: var(--dim);
+    margin-bottom: 1.2rem;
+  }
+  .post-body h2 {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-style: italic;
+    margin: 2.5rem 0 .8rem;
+  }
+  .post-body h3 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    margin: 1.8rem 0 .6rem;
+    font-style: italic;
+  }
+  .post-body ul, .post-body ol {
+    padding-left: 1.3rem;
+    color: var(--dim);
+    line-height: 2;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+  }
+  .post-body code {
+    font-family: var(--mono);
+    font-size: .8rem;
+    color: var(--code);
+    background: var(--bg3);
+    padding: .1rem .35rem;
+  }
+  .post-body strong { color: var(--text); }
+  .post-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../../index.html" class="logo">adri<em>.js</em>_</a>
+  <div class="nav-mid">
+    <a href="../../index.html#about">Yo</a>
+    <a href="../../index.html#blog">Blog</a>
+    <a href="../../index.html#projects">Proyectos</a>
+    <a href="../../index.html#cv">CV</a>
+    <a href="../../index.html#games">Juegos</a>
+  </div>
+  <div class="nav-right">
+    <div class="tdots">
+      <button class="td on" id="td-dark"  style="background:#4ade80"                           onclick="T('','td-dark')"        title="Verde (default)"></button>
+      <button class="td"    id="td-rosso" style="background:#f87171"                           onclick="T('rosso','td-rosso')"  title="Rojo suave"></button>
+      <button class="td"    id="td-paper" style="background:#f5f1e8;border:1.5px solid #bbb"   onclick="T('paper','td-paper')"  title="Papel claro"></button>
+      <button class="td"    id="td-night" style="background:#6ea8fe"                           onclick="T('night','td-night')"  title="Noche azul"></button>
+    </div>
+  </div>
+</nav>
+
+<main class="post-page">
+  <a href="../../index.html#blog" class="post-back">← Volver al blog</a>
+
+  <header class="post-header">
+    <div class="post-cat">Engineering</div>
+    <h1>Software Metrics: el GPS de tu equipo</h1>
+    <div class="meta">Por adri.js_ · Jun 2026 · 6 min de lectura</div>
+  </header>
+
+  <div class="post-body">
+    <p>Imagina que conduces con los ojos cerrados y dices "creo que voy bien". Eso es un equipo de software sin métricas. No son burocracia — son información que convierte intuiciones en decisiones.</p>
+
+    <h2>¿Qué son las métricas de software?</h2>
+    <p>Medidas cuantitativas del comportamiento de tu software y tu equipo. Hay métricas de <strong>producto</strong> (¿cómo está el código?) y de <strong>proceso</strong> (¿cómo trabaja el equipo?).</p>
+    <p>La clave es elegirlas bien. Una métrica mal elegida puede incentivarte a optimizar lo que no importa — y eso es peor que no tener ninguna.</p>
+
+    <h2>Las DORA Metrics — el estándar de oro</h2>
+    <p>El equipo de investigación DevOps Research and Assessment (DORA) de Google lleva años estudiando qué distingue a los equipos de alto rendimiento. Su conclusión: cuatro métricas lo explican casi todo.</p>
+
+    <div class="mp-grid">
+      <div class="mp">
+        <div class="mn">Deployment Frequency</div>
+        <div class="mv">Elite: daily+</div>
+        <div class="md">Cuántas veces deploya tu equipo a producción. Más frecuente = menor riesgo por deploy.</div>
+      </div>
+      <div class="mp">
+        <div class="mn">Lead Time for Changes</div>
+        <div class="mv">Elite: &lt; 1h</div>
+        <div class="md">Tiempo desde que un commit entra hasta que llega a producción. Tu velocidad real de entrega.</div>
+      </div>
+      <div class="mp">
+        <div class="mn">Change Failure Rate</div>
+        <div class="mv">Elite: 0–15%</div>
+        <div class="md">Porcentaje de cambios que causan incidentes en producción. La calidad de lo que entregas.</div>
+      </div>
+      <div class="mp">
+        <div class="mn">MTTR</div>
+        <div class="mv">Elite: &lt; 1h</div>
+        <div class="md">Mean Time To Restore. Cuánto tardas en recuperarte cuando algo falla. Tu resiliencia.</div>
+      </div>
+    </div>
+
+    <h2>Métricas de código que deberías conocer</h2>
+    <ul>
+      <li><code>Code Coverage</code>: el porcentaje de código cubierto por tests. Ojo: 80% con buenos tests vale más que 100% con tests vacíos.</li>
+      <li><code>Cyclomatic Complexity</code>: cuántos caminos independientes tiene tu código. A más caminos, más difícil de testear y mantener.</li>
+      <li><code>Technical Debt Ratio</code>: tiempo estimado para arreglar el código vs. tiempo para desarrollarlo. Objetivo: menos del 5%.</li>
+      <li><code>Duplication Rate</code>: porcentaje de código duplicado. El copiar-pegar envejece mal.</li>
+    </ul>
+
+    <h2>El error más común</h2>
+    <p>Optimizar las métricas en lugar del problema real. Las métricas son un espejo, no el objetivo.</p>
+    <p>Si tu <strong>Deployment Frequency</strong> sube porque empiezas a hacer deploys vacíos, no mejoraste nada — solo engañaste al dashboard. Si tu <strong>Code Coverage</strong> llega al 100% con tests que no verifican nada, igual.</p>
+    <p>Úsalas como lo que son: señales de dónde mirar, no metas en sí mismas.</p>
+
+    <h2>Por dónde empezar</h2>
+    <p>No intentes medir todo a la vez. Mi recomendación: empieza con Deployment Frequency y MTTR. Son las que más rápido te dan contexto de cómo trabaja tu equipo y dónde duele más.</p>
+    <p>Una vez que tengas esas dos bajo control y visibles para el equipo, añade Lead Time. Change Failure Rate viene sola cuando los procesos maduran.</p>
+  </div>
+
+  <div class="post-footer">
+    <a href="../../index.html#blog" class="hcta">← Todos los posts</a>
+    <span style="font-family:var(--mono);font-size:.65rem;color:var(--lo)">adri.js_ · 2026</span>
+  </div>
+</main>
+
+<script>
+/* Theme — necesario para que el switcher funcione también en los posts */
+function T(cls,id){
+  document.body.className=cls;
+  document.querySelectorAll('.td').forEach(d=>d.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  localStorage.setItem('adri-t',cls+'|'+id);
+}
+(()=>{
+  const s=localStorage.getItem('adri-t');
+  if(!s)return;
+  const[cls,id]=s.split('|');
+  document.body.className=cls;
+  document.querySelectorAll('.td').forEach(d=>d.classList.remove('on'));
+  document.getElementById(id)?.classList.add('on');
+})();
+</script>
+</body>
+</html>
